@@ -10,10 +10,10 @@
 		2210C5101DFC5D11008E2DF5 /* Euclid macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2210C50E1DFC5D11008E2DF5 /* Euclid macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2210C5221DFC5D32008E2DF5 /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2210C5191DFC5D31008E2DF5 /* Euclid.framework */; };
 		2210C5271DFC5D32008E2DF5 /* Euclid_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210C5261DFC5D32008E2DF5 /* Euclid_Tests.swift */; };
-		2210C5291DFC5D32008E2DF5 /* Euclid iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2210C51B1DFC5D32008E2DF5 /* Euclid iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2210C5331DFC5F2C008E2DF5 /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210C5321DFC5F2C008E2DF5 /* Euclid.swift */; };
 		2210C5341DFC5F2C008E2DF5 /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210C5321DFC5F2C008E2DF5 /* Euclid.swift */; };
 		2210C5351DFC5F2C008E2DF5 /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210C5321DFC5F2C008E2DF5 /* Euclid.swift */; };
+		22DD5F931DFCCC4C00D97556 /* Euclid iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DD5F921DFCCC4C00D97556 /* Euclid iOS.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,18 +27,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2210C5011DFC5CF3008E2DF5 /* Euclid iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euclid iOS.h"; sourceTree = "<group>"; };
-		2210C5021DFC5CF3008E2DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2210C50C1DFC5D11008E2DF5 /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2210C50E1DFC5D11008E2DF5 /* Euclid macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euclid macOS.h"; sourceTree = "<group>"; };
 		2210C50F1DFC5D11008E2DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2210C5191DFC5D31008E2DF5 /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2210C51B1DFC5D32008E2DF5 /* Euclid iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euclid iOS.h"; sourceTree = "<group>"; };
-		2210C51C1DFC5D32008E2DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2210C5211DFC5D32008E2DF5 /* Euclid Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2210C5261DFC5D32008E2DF5 /* Euclid_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euclid_Tests.swift; sourceTree = "<group>"; };
 		2210C5281DFC5D32008E2DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2210C5321DFC5F2C008E2DF5 /* Euclid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euclid.swift; sourceTree = "<group>"; };
+		22DD5F921DFCCC4C00D97556 /* Euclid iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid iOS.h"; sourceTree = "<group>"; };
+		22DD5F941DFCCC5100D97556 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 			children = (
 				2210C5001DFC5CF3008E2DF5 /* Euclid iOS */,
 				2210C50D1DFC5D11008E2DF5 /* Euclid macOS */,
-				2210C51A1DFC5D32008E2DF5 /* Euclid iOS */,
 				2210C5251DFC5D32008E2DF5 /* Euclid Tests */,
 				2210C4FF1DFC5CF2008E2DF5 /* Products */,
 			);
@@ -105,15 +102,6 @@
 			path = "Euclid macOS";
 			sourceTree = "<group>";
 		};
-		2210C51A1DFC5D32008E2DF5 /* Euclid iOS */ = {
-			isa = PBXGroup;
-			children = (
-				2210C51B1DFC5D32008E2DF5 /* Euclid iOS.h */,
-				2210C51C1DFC5D32008E2DF5 /* Info.plist */,
-			);
-			path = "Euclid iOS";
-			sourceTree = "<group>";
-		};
 		2210C5251DFC5D32008E2DF5 /* Euclid Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +115,8 @@
 		2210C5301DFC5EEC008E2DF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2210C5011DFC5CF3008E2DF5 /* Euclid iOS.h */,
-				2210C5021DFC5CF3008E2DF5 /* Info.plist */,
+				22DD5F941DFCCC5100D97556 /* Info.plist */,
+				22DD5F921DFCCC4C00D97556 /* Euclid iOS.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,7 +145,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2210C5291DFC5D32008E2DF5 /* Euclid iOS.h in Headers */,
+				22DD5F931DFCCC4C00D97556 /* Euclid iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +703,7 @@
 				2210C5131DFC5D11008E2DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2210C52A1DFC5D32008E2DF5 /* Build configuration list for PBXNativeTarget "Euclid iOS" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +712,7 @@
 				2210C52C1DFC5D32008E2DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2210C52D1DFC5D32008E2DF5 /* Build configuration list for PBXNativeTarget "Euclid Tests" */ = {
 			isa = XCConfigurationList;
@@ -731,6 +721,7 @@
 				2210C52F1DFC5D32008E2DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,15 +13,6 @@ import CoreLocation
 
 class Euclid_Tests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
     func testDistanceBetweenCoordinates() {
         let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
@@ -53,16 +44,40 @@ class Euclid_Tests: XCTestCase {
     }
     
     func testDestinationCoordinateForCompassBearing() {
-        // TODO
+        
+        let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
+        let destination = CLLocationCoordinate2D(latitude: 52.0, longitude: -1.461)
+        
+        let compassBearing = source.compassBearing(to: destination)
+        
+        let calculatedDestination = Euclid.destination(start: source, distance: 100000, compassBearing: compassBearing)
+        
+        XCTAssertEqualWithAccuracy(calculatedDestination.latitude, destination.latitude, accuracy: 0.01)
+        XCTAssertEqualWithAccuracy(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
     }
     
     func testDestinationCoordinateForBearing() {
-        // TODO
+        
+        let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
+        let destination = CLLocationCoordinate2D(latitude: 52.0, longitude: -1.461)
+        
+        let bearing = source.bearing(to: destination)
+        
+        let calculatedDestination = Euclid.destination(start: source, distance: 100000, bearing: bearing)
+        
+        XCTAssertEqualWithAccuracy(calculatedDestination.latitude, destination.latitude, accuracy: 0.01)
+        XCTAssertEqualWithAccuracy(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
     }
     
     func testRadianConversion() {
         let degrees = CLLocationDegrees(360)
         let radians = degrees.toRadians()
-        XCTAssertEqualWithAccuracy(radians, 6.28319, accuracy: 0.01 ,"Expected radian is ~6.28319")
+        XCTAssertEqualWithAccuracy(radians, 6.28319, accuracy: 0.01 ,"Expected radians is ~6.28319")
+    }
+    
+    func testDegreeConversion() {
+        let radians = 1.0
+        let degrees = radians.toDegrees()
+        XCTAssertEqualWithAccuracy(degrees, 57.2958, accuracy: 0.01 ,"Expected degrees is ~57.2958")
     }
 }
