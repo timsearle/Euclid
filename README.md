@@ -28,14 +28,14 @@ ___
 
 ###  Euclid
 
-```
+``` Swift
 public static func destination(start: CLLocationCoordinate2D, distance: CLLocationDistance, bearing: Bearing) -> CLLocationCoordinate2D { } // Destionation coordinate given start, distance and bearing
 let calculatedDestination = Euclid.destination(start: source, distance: 100000, bearing: bearing)
 ```
 
 ### Extensions on `CLLocationCoordinate2D`
 
-```
+``` Swift
 public func distance(from coordinate: CLLocationCoordinate2D) -> CLLocationDistance { }
 source.distance(from: destination) // Distance in metres
 
@@ -48,7 +48,7 @@ source.compassBearing(to: destination) // Bearing in range 0 - 360
 
 ### Useful constants and types
 
-```
+``` Swift
 Euclid.kEarthRadiusMetres // Radius of the earth in metres used by all calculations (6371e3)
 
 public typealias Bearing = Double // Representing a bearing in the range -180 - 180
