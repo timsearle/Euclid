@@ -22,6 +22,11 @@ public struct BoundingBox {
     public let lowerLeft: CLLocationCoordinate2D
     public let upperRight: CLLocationCoordinate2D
     
+    public init(lowerLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D) {
+        self.lowerLeft = lowerLeft
+        self.upperRight = upperRight
+    }
+    
     /// Return a new bounding box by expanding the receiver by the specified distance in metres
     ///
     /// - Parameters:
