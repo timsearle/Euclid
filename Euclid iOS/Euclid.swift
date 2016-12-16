@@ -19,8 +19,8 @@ public typealias Bearing = Double
 ///
 ///     public func increase(by distance: Double) -> BoundingBox
 public struct BoundingBox {
-    let lowerLeft: CLLocationCoordinate2D
-    let upperRight: CLLocationCoordinate2D
+    public let lowerLeft: CLLocationCoordinate2D
+    public let upperRight: CLLocationCoordinate2D
     
     /// Return a new bounding box by expanding the receiver by the specified distance in metres
     ///
