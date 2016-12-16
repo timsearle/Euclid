@@ -12,6 +12,29 @@ import CoreLocation
 public typealias Radians = Double
 public typealias Bearing = Double
 
+/// BoundingBox comprised of a lower left and upper right coordinate space
+///
+///     let lowerLeft: Double
+///     let upperRight: Double
+///
+///     public func increase(by distance: Double) -> BoundingBox
+public struct BoundingBox {
+    let lowerLeft: CLLocationCoordinate2D
+    let upperRight: CLLocationCoordinate2D
+    
+    /// Return a new bounding box by expanding the receiver by the specified distance in metres
+    ///
+    /// - Parameters:
+    ///   - distance: Distance in metres to increase the bounding box by. Negative value will return an invalid BoundingBox.
+    /// - Returns: A new bounding box
+    public func expand(by distance: Double) -> BoundingBox {
+        let adjustedLowerLeft = Euclid.destination(start: self.lowerLeft, distance: distance, compassBearing: 225)
+        let adjustedUpperRight = Euclid.destination(start: self.upperRight, distance: distance, compassBearing: 45)
+        
+        return BoundingBox(lowerLeft: adjustedLowerLeft, upperRight: adjustedUpperRight)
+    }
+}
+
 /// Euclid - Utility framework for dealing with Great Circle mathematics.
 public class Euclid {
     

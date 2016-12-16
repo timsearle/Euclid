@@ -13,7 +13,6 @@ import CoreLocation
 
 class Euclid_Tests: XCTestCase {
     
-    
     func testDistanceBetweenCoordinates() {
         let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
         let destination = CLLocationCoordinate2D(latitude: 52.0, longitude: -1.461)
@@ -79,5 +78,34 @@ class Euclid_Tests: XCTestCase {
         let radians = 1.0
         let degrees = radians.toDegrees()
         XCTAssertEqualWithAccuracy(degrees, 57.2958, accuracy: 0.01 ,"Expected degrees is ~57.2958")
+    }
+    
+    func testBoundingBox() {
+        let lowerLeft = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
+        let upperRight = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
+        
+        let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
+        
+        XCTAssertEqual(boundingBox.lowerLeft.latitude, lowerLeft.latitude)
+        XCTAssertEqual(boundingBox.lowerLeft.longitude, lowerLeft.longitude)
+        XCTAssertEqual(boundingBox.upperRight.latitude, upperRight.latitude)
+        XCTAssertEqual(boundingBox.upperRight.longitude, upperRight.longitude)
+    }
+    
+    func testBoundingBoxExpand() {
+        let lowerLeft = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
+        let upperRight = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
+        
+        let expandedLowerLeft = CLLocationCoordinate2DMake(53.396981156263728, -2.4017320756211551)
+        let expandedUpperRight = CLLocationCoordinate2DMake(53.577707783323063, -2.0979894065098326)
+        
+        let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
+        let expandedBoundingBox = boundingBox.expand(by: 1000)
+        
+        
+        XCTAssertEqual(expandedBoundingBox.lowerLeft.latitude, expandedLowerLeft.latitude)
+        XCTAssertEqual(expandedBoundingBox.lowerLeft.longitude, expandedLowerLeft.longitude)
+        XCTAssertEqual(expandedBoundingBox.upperRight.latitude, expandedUpperRight.latitude)
+        XCTAssertEqual(expandedBoundingBox.upperRight.longitude, expandedUpperRight.longitude)
     }
 }
