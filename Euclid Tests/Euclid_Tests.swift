@@ -84,12 +84,16 @@ class Euclid_Tests: XCTestCase {
         let lowerLeft = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
         let upperRight = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
         
+        let diagonal = lowerLeft.distance(from: upperRight)
+        
         let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
         
         XCTAssertEqual(boundingBox.lowerLeft.latitude, lowerLeft.latitude)
         XCTAssertEqual(boundingBox.lowerLeft.longitude, lowerLeft.longitude)
         XCTAssertEqual(boundingBox.upperRight.latitude, upperRight.latitude)
         XCTAssertEqual(boundingBox.upperRight.longitude, upperRight.longitude)
+        
+        XCTAssertEqual(boundingBox.diagonalDistance(), diagonal)
     }
     
     func testBoundingBoxExpand() {
