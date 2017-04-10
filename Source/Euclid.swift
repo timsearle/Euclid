@@ -17,20 +17,23 @@ public typealias Bearing = Double
 ///     let lowerLeft: Double
 ///     let upperRight: Double
 ///
-///     public func increase(by distance: Double) -> BoundingBox
+///     public func expand(by distance: Double) -> BoundingBox
+///     public func shrink(by distance: Double) -> BoundingBox
 public struct BoundingBox {
     public let lowerLeft: CLLocationCoordinate2D
     public let upperRight: CLLocationCoordinate2D
-    private let diagonal: CLLocationDistance
+    
+    /// Returns a CLLocationDistance representing the distance between the lowerLeft and upperRight coordinates.
+    public let diagonal: CLLocationDistance
+    
+    /// Returns a CLLocationCoordinate2D representing the centre of the bounding box
+    public let center: CLLocationCoordinate2D
     
     public init(lowerLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D) {
         self.lowerLeft = lowerLeft
         self.upperRight = upperRight
-        self.diagonal = self.lowerLeft.distance(from: self.upperRight)
-    }
-    
-    public func diagonalDistance() -> CLLocationDistance {
-        return self.diagonal
+        self.diagonal = self.lowerLeft.distance(to: self.upperRight)
+        self.center = Euclid.destination(start: self.lowerLeft, distance: self.diagonal / 2, compassBearing: self.lowerLeft.bearing(to: self.upperRight))
     }
     
     /// Return a new bounding box by expanding the receiver by the specified distance in metres
@@ -41,6 +44,18 @@ public struct BoundingBox {
     public func expand(by distance: Double) -> BoundingBox {
         let adjustedLowerLeft = Euclid.destination(start: self.lowerLeft, distance: distance, compassBearing: 225)
         let adjustedUpperRight = Euclid.destination(start: self.upperRight, distance: distance, compassBearing: 45)
+        
+        return BoundingBox(lowerLeft: adjustedLowerLeft, upperRight: adjustedUpperRight)
+    }
+    
+    /// Return a new bounding box by shrinking the receiver by the specified distance in metres
+    ///
+    /// - Parameters:
+    ///   - distance: Distance in metres to increase the bounding box by. Negative value will return an invalid BoundingBox.
+    /// - Returns: A new bounding box
+    public func shrink(by distance: Double) -> BoundingBox {
+        let adjustedLowerLeft = Euclid.destination(start: self.lowerLeft, distance: distance, compassBearing: 45)
+        let adjustedUpperRight = Euclid.destination(start: self.upperRight, distance: distance, compassBearing: 225)
         
         return BoundingBox(lowerLeft: adjustedLowerLeft, upperRight: adjustedUpperRight)
     }
@@ -113,7 +128,7 @@ public extension CLLocationCoordinate2D {
     ///
     /// - Parameter coordinate: Target CLLocationCoordinate2D to measure the distance to
     /// - Returns: CLLocationDistance representing the distance metres
-    public func distance(from coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
+    public func distance(to coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
         
         let latitudeSource = self.latitude
         let longitudeSource = self.longitude

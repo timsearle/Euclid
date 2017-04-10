@@ -8,19 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2210C5221DFC5D32008E2DF5 /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2210C5191DFC5D31008E2DF5 /* Euclid.framework */; };
-		22C2ABB51E06DAFD00EF9607 /* Euclid_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* Euclid_Tests.swift */; };
+		22C2ABB51E06DAFD00EF9607 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */; };
 		875610591E9B829A001F0E1E /* Euclid iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610511E9B8290001F0E1E /* Euclid iOS.h */; };
 		8756105A1E9B829F001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610821E9B8B24001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610711E9B8ACE001F0E1E /* Euclid.framework */; };
-		875610881E9B8BC4001F0E1E /* Euclid_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* Euclid_Tests.swift */; };
+		875610881E9B8BC4001F0E1E /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */; };
 		875610891E9B8BFD001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		8756108A1E9B8C88001F0E1E /* Euclid macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610521E9B8290001F0E1E /* Euclid macOS.h */; };
 		875610981E9B8D6A001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610A21E9B8DB6001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610901E9B8D57001F0E1E /* Euclid.framework */; };
-		875610A81E9B8DD1001F0E1E /* Euclid_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* Euclid_Tests.swift */; };
+		875610A81E9B8DD1001F0E1E /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */; };
 		875610AB1E9B8E3D001F0E1E /* Euclid tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */; };
 		875610B91E9B8EA6001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610BD1E9B8ED8001F0E1E /* Euclid watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */; };
+		875610E11E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */; };
+		875610E21E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */; };
+		875610E31E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,7 @@
 /* Begin PBXFileReference section */
 		2210C5191DFC5D31008E2DF5 /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2210C5211DFC5D32008E2DF5 /* Euclid iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		22C2ABAD1E06D99900EF9607 /* Euclid_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Euclid_Tests.swift; path = "Euclid Tests/Euclid_Tests.swift"; sourceTree = SOURCE_ROOT; };
+		22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordinateTests.swift; path = "Euclid Tests/CoordinateTests.swift"; sourceTree = SOURCE_ROOT; };
 		22C2ABAE1E06D99900EF9607 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Euclid Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		875610511E9B8290001F0E1E /* Euclid iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid iOS.h"; path = "Source/Euclid iOS.h"; sourceTree = "<group>"; };
 		875610521E9B8290001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid macOS.h"; path = "Source/Euclid macOS.h"; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid tvOS.h"; path = "Source/Euclid tvOS.h"; sourceTree = "<group>"; };
 		875610B11E9B8E80001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid watchOS.h"; path = "Source/Euclid watchOS.h"; sourceTree = "<group>"; };
+		875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBoxTests.swift; path = "Euclid Tests/BoundingBoxTests.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +151,8 @@
 		2210C5251DFC5D32008E2DF5 /* Euclid Tests */ = {
 			isa = PBXGroup;
 			children = (
-				22C2ABAD1E06D99900EF9607 /* Euclid_Tests.swift */,
+				22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */,
+				875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */,
 				22C2ABAE1E06D99900EF9607 /* Info.plist */,
 			);
 			name = "Euclid Tests";
@@ -460,7 +465,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C2ABB51E06DAFD00EF9607 /* Euclid_Tests.swift in Sources */,
+				22C2ABB51E06DAFD00EF9607 /* CoordinateTests.swift in Sources */,
+				875610E11E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610881E9B8BC4001F0E1E /* Euclid_Tests.swift in Sources */,
+				875610881E9B8BC4001F0E1E /* CoordinateTests.swift in Sources */,
+				875610E21E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610A81E9B8DD1001F0E1E /* Euclid_Tests.swift in Sources */,
+				875610A81E9B8DD1001F0E1E /* CoordinateTests.swift in Sources */,
+				875610E31E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1253,6 +1261,7 @@
 				875610781E9B8ACE001F0E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		875610851E9B8B24001F0E1E /* Build configuration list for PBXNativeTarget "Euclid macOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1261,6 +1270,7 @@
 				875610871E9B8B24001F0E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		875610951E9B8D57001F0E1E /* Build configuration list for PBXNativeTarget "Euclid tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1269,6 +1279,7 @@
 				875610971E9B8D57001F0E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		875610A51E9B8DB6001F0E1E /* Build configuration list for PBXNativeTarget "Euclid tvOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1277,6 +1288,7 @@
 				875610A71E9B8DB6001F0E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		875610B61E9B8E80001F0E1E /* Build configuration list for PBXNativeTarget "Euclid watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1285,6 +1297,7 @@
 				875610B81E9B8E80001F0E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
