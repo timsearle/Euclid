@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
+               BlueprintIdentifier = "8756108F1E9B8D57001F0E1E"
                BuildableName = "Euclid.framework"
-               BlueprintName = "Euclid iOS"
+               BlueprintName = "Euclid tvOS"
                ReferencedContainer = "container:Euclid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2210C5201DFC5D32008E2DF5"
-               BuildableName = "Euclid iOS Tests.xctest"
-               BlueprintName = "Euclid iOS Tests"
+               BlueprintIdentifier = "8756109C1E9B8DB6001F0E1E"
+               BuildableName = "Euclid tvOS Tests.xctest"
+               BlueprintName = "Euclid tvOS Tests"
                ReferencedContainer = "container:Euclid.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
+            BlueprintIdentifier = "8756108F1E9B8D57001F0E1E"
             BuildableName = "Euclid.framework"
-            BlueprintName = "Euclid iOS"
+            BlueprintName = "Euclid tvOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,7 +52,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
+            BlueprintIdentifier = "8756108F1E9B8D57001F0E1E"
             BuildableName = "Euclid.framework"
-            BlueprintName = "Euclid iOS"
+            BlueprintName = "Euclid tvOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
+            BlueprintIdentifier = "8756108F1E9B8D57001F0E1E"
             BuildableName = "Euclid.framework"
-            BlueprintName = "Euclid iOS"
+            BlueprintName = "Euclid tvOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2210C50B1DFC5D11008E2DF5"
+               BlueprintIdentifier = "875610701E9B8ACE001F0E1E"
                BuildableName = "Euclid.framework"
                BlueprintName = "Euclid macOS"
                ReferencedContainer = "container:Euclid.xcodeproj">
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8756107C1E9B8B24001F0E1E"
+               BuildableName = "Euclid macOS Tests.xctest"
+               BlueprintName = "Euclid macOS Tests"
+               ReferencedContainer = "container:Euclid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "875610701E9B8ACE001F0E1E"
+            BuildableName = "Euclid.framework"
+            BlueprintName = "Euclid macOS"
+            ReferencedContainer = "container:Euclid.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C50B1DFC5D11008E2DF5"
+            BlueprintIdentifier = "875610701E9B8ACE001F0E1E"
             BuildableName = "Euclid.framework"
             BlueprintName = "Euclid macOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
@@ -63,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C50B1DFC5D11008E2DF5"
+            BlueprintIdentifier = "875610701E9B8ACE001F0E1E"
             BuildableName = "Euclid.framework"
             BlueprintName = "Euclid macOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
