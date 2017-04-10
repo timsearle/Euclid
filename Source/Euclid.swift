@@ -14,23 +14,30 @@ public typealias Bearing = Double
 
 /// BoundingBox comprised of a lower left and upper right coordinate space
 ///
-///     let lowerLeft: Double
-///     let upperRight: Double
+///     let lowerLeft: CLLocationCoordinate2D
+///     let upperRight: CLLocationCoordinate2D
+///     let diagonal: CLLocationDistance
+///     let midpoint: CLLocationCoordinate2D
 ///
-///     public func increase(by distance: Double) -> BoundingBox
-public struct BoundingBox {
+///     public func expand(by distance: CLLocationDistance) -> BoundingBox
+///     public func shrink(by distance: CLLocationDistance) -> BoundingBox
+///     public func contains(coordinate: CLLocationCoordinate2D) -> Bool
+public struct BoundingBox: CustomStringConvertible, CustomDebugStringConvertible {
     public let lowerLeft: CLLocationCoordinate2D
     public let upperRight: CLLocationCoordinate2D
-    private let diagonal: CLLocationDistance
+    
+    /// Returns a CLLocationDistance representing the distance between the lowerLeft and upperRight coordinates.
+    public let diagonal: CLLocationDistance
+    
+    /// Returns a CLLocationCoordinate2D representing the midpoint of the bounding box along a great-circle path.
+    /// NOTE: The midpoint may not be located half-way between the coordinates.
+    public let midpoint: CLLocationCoordinate2D
     
     public init(lowerLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D) {
         self.lowerLeft = lowerLeft
         self.upperRight = upperRight
-        self.diagonal = self.lowerLeft.distance(from: self.upperRight)
-    }
-    
-    public func diagonalDistance() -> CLLocationDistance {
-        return self.diagonal
+        self.diagonal = self.lowerLeft.distance(to: self.upperRight)
+        self.midpoint = lowerLeft.midpoint(between: upperRight)
     }
     
     /// Return a new bounding box by expanding the receiver by the specified distance in metres
@@ -38,11 +45,47 @@ public struct BoundingBox {
     /// - Parameters:
     ///   - distance: Distance in metres to increase the bounding box by. Negative value will return an invalid BoundingBox.
     /// - Returns: A new bounding box
-    public func expand(by distance: Double) -> BoundingBox {
+    public func expand(by distance: CLLocationDistance) -> BoundingBox {
         let adjustedLowerLeft = Euclid.destination(start: self.lowerLeft, distance: distance, compassBearing: 225)
         let adjustedUpperRight = Euclid.destination(start: self.upperRight, distance: distance, compassBearing: 45)
         
         return BoundingBox(lowerLeft: adjustedLowerLeft, upperRight: adjustedUpperRight)
+    }
+    
+    /// Return a new bounding box by shrinking the receiver by the specified distance in metres
+    ///
+    /// - Parameters:
+    ///   - distance: Distance in metres to increase the bounding box by. Negative value will return an invalid BoundingBox.
+    /// - Returns: A new bounding box
+    public func shrink(by distance: CLLocationDistance) -> BoundingBox {
+        let adjustedLowerLeft = Euclid.destination(start: self.lowerLeft, distance: distance, compassBearing: 45)
+        let adjustedUpperRight = Euclid.destination(start: self.upperRight, distance: distance, compassBearing: 225)
+        
+        return BoundingBox(lowerLeft: adjustedLowerLeft, upperRight: adjustedUpperRight)
+    }
+    
+    /// Return a `Bool` representing whether or not the given coordinate lies within the bounds of the receiving `BoundingBox`
+    ///
+    /// - Parameters:
+    ///   - coordinate: A `CLLocationCoordinate2D` to check
+    /// - Returns: A `Bool` representing if the coordinate is contained in the bounding box
+    public func contains(coordinate: CLLocationCoordinate2D) -> Bool {
+        return (coordinate.latitude >= lowerLeft.latitude && coordinate.latitude <= upperRight.latitude) &&
+            (coordinate.longitude >= lowerLeft.longitude && coordinate.longitude <= upperRight.longitude)
+    }
+    
+    public var description: String {
+        var description = "Bounding Box:\n"
+        description += "lowerLeft coordinate: \(lowerLeft)\n"
+        description += "upperRight coordinate: \(upperRight)\n"
+        description += "midpoint: \(midpoint)\n"
+        description += "diagonal: \(diagonal) metres\n"
+        
+        return description
+    }
+    
+    public var debugDescription: String {
+        return self.description
     }
 }
 
@@ -109,11 +152,11 @@ public extension CLLocationDegrees {
 
 public extension CLLocationCoordinate2D {
     
-    /// Distance in metres between receiver and CLLocationCoordinate2D passed as an argument
+    /// Distance in metres between receiver and `CLLocationCoordinate2D` passed as an argument
     ///
-    /// - Parameter coordinate: Target CLLocationCoordinate2D to measure the distance to
-    /// - Returns: CLLocationDistance representing the distance metres
-    public func distance(from coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
+    /// - Parameter coordinate: Target `CLLocationCoordinate2D` to measure the distance to
+    /// - Returns: `CLLocationDistance` representing the distance metres
+    public func distance(to coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
         
         let latitudeSource = self.latitude
         let longitudeSource = self.longitude
@@ -133,19 +176,19 @@ public extension CLLocationCoordinate2D {
         return distance
     }
     
-    /// Initial compass bearing (in range of 0 - 360) relative to North from receiver to travel in direction of CLLocationCoordinate2D passed as an argument
+    /// Initial compass bearing (in range of 0 - 360) relative to North from receiver to travel in direction of `CLLocationCoordinate2D` passed as an argument
     ///
     /// - Parameter coordinate: Target CLLocationCoordinate2D to calculate bearing towards
     /// - Returns: The initial compass bearing required to travel in a straight line to target coordinate
     public func compassBearing(to coordinate: CLLocationCoordinate2D) -> CLLocationDirection {
         let bearing = self.bearing(to: coordinate)
         
-        return (bearing.toRadians() + (2 * M_PI)).toDegrees()
+        return (bearing + 360).truncatingRemainder(dividingBy: 360)
     }
     
-    /// Initial bearing (in range of -180 - 180) relative to North from receiver to travel in direction of CLLocationCoordinate2D passed as an argument
+    /// Initial bearing (in range of -180 - 180) relative to North from receiver to travel in direction of `CLLocationCoordinate2D` passed as an argument
     ///
-    /// - Parameter coordinate: Target CLLocationCoordinate2D to calculate bearing towards
+    /// - Parameter coordinate: Target `CLLocationCoordinate2D` to calculate bearing towards
     /// - Returns: The initial bearing required to travel in a straight line to target coordinate
     public func bearing(to coordinate: CLLocationCoordinate2D) -> Bearing {
         
@@ -161,9 +204,31 @@ public extension CLLocationCoordinate2D {
         let longitudeDestinationRads = longitudeDestination.toRadians()
         
         let y = sin(longitudeDestinationRads - longitudeSourceRads) * cos(latitudeDestinationRads)
-        let x = cos(latitudeSourceRads) * sin(latitudeDestinationRads) - sin(latitudeDestinationRads) * cos(latitudeSourceRads) * cos(longitudeDestinationRads - longitudeSourceRads)
-        let bearing = atan2(y, x).toDegrees()
+        let x = cos(latitudeSourceRads) * sin(latitudeDestinationRads) - sin(latitudeSourceRads) * cos(latitudeDestinationRads) * cos(longitudeDestinationRads - longitudeSourceRads)
+        let bearing = atan2(y, x)
+        let degrees = bearing.toDegrees()
         
-        return bearing
+        return degrees
+    }
+    
+    /// Returns the midway coordinate along a great circle path between the receiver and the parameter
+    ///
+    /// - Parameter coordinate: Destination `CLLocationCoordinate2D` to calculate midway point en route to
+    /// - Returns: The midway point between the receiver and `coordinate`
+    public func midpoint(between coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+        
+        let latitudeSourceRads = self.latitude.toRadians()
+        let latitudeDestinationRads = coordinate.latitude.toRadians()
+        let longitudeSourceRads = self.longitude.toRadians()
+        let longitudeDestinationRads = coordinate.longitude.toRadians()
+        
+        let Bx = cos(latitudeDestinationRads) * cos(longitudeDestinationRads - longitudeSourceRads)
+        let By = cos(latitudeDestinationRads) * sin(longitudeDestinationRads - longitudeSourceRads)
+        
+        let midLatitude = atan2(sin(latitudeSourceRads) + sin(latitudeDestinationRads), sqrt((cos(latitudeSourceRads) + Bx) * (cos(latitudeSourceRads) + Bx) + By * By))
+        let midLongitude = longitudeSourceRads + atan2(By, cos(latitudeSourceRads) + Bx)
+        
+        return CLLocationCoordinate2D(latitude: midLatitude.toDegrees(), longitude: midLongitude.toDegrees())
+        
     }
 }

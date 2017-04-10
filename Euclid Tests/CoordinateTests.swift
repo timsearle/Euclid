@@ -1,6 +1,6 @@
 //
-//  Euclid_Tests.swift
-//  Euclid Tests
+//  CoordinateTests.swift
+//  CoordinateTests
 //
 //  Created by Tim Searle on 10/12/2016.
 //
@@ -11,14 +11,14 @@ import CoreLocation
 
 @testable import Euclid
 
-class Euclid_Tests: XCTestCase {
+class CoordinateTests: XCTestCase {
     
     func testDistanceBetweenCoordinates() {
         let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
         let destination = CLLocationCoordinate2D(latitude: 52.0, longitude: -1.461)
         
-        let test1000 = source.distance(from: destination)
-        let testTranspose1000 = destination.distance(from: source)
+        let test1000 = source.distance(to: destination)
+        let testTranspose1000 = destination.distance(to: source)
     
         XCTAssertEqualWithAccuracy(test1000, 100000, accuracy: 20, "Expected distance is ~100,000 metres")
         XCTAssertTrue(test1000 == testTranspose1000 , "Swapping sender and receiver should not cause different results")
@@ -68,6 +68,17 @@ class Euclid_Tests: XCTestCase {
         XCTAssertEqualWithAccuracy(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
     }
     
+    func testMidpointBetweenCoordinates() {
+        let source = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
+        let destination = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
+        let actualMidpoint = CLLocationCoordinate2DMake(53.4875, -2.250278)
+        
+        let calcuatedMidpoint = source.midpoint(between: destination)
+        
+        XCTAssertEqualWithAccuracy(calcuatedMidpoint.latitude, actualMidpoint.latitude, accuracy: 0.001)
+        XCTAssertEqualWithAccuracy(calcuatedMidpoint.longitude, actualMidpoint.longitude, accuracy: 0.001)
+    }
+    
     func testRadianConversion() {
         let degrees = CLLocationDegrees(360)
         let radians = degrees.toRadians()
@@ -79,37 +90,5 @@ class Euclid_Tests: XCTestCase {
         let degrees = radians.toDegrees()
         XCTAssertEqualWithAccuracy(degrees, 57.2958, accuracy: 0.01 ,"Expected degrees is ~57.2958")
     }
-    
-    func testBoundingBox() {
-        let lowerLeft = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
-        let upperRight = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
-        
-        let diagonal = lowerLeft.distance(from: upperRight)
-        
-        let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
-        
-        XCTAssertEqual(boundingBox.lowerLeft.latitude, lowerLeft.latitude)
-        XCTAssertEqual(boundingBox.lowerLeft.longitude, lowerLeft.longitude)
-        XCTAssertEqual(boundingBox.upperRight.latitude, upperRight.latitude)
-        XCTAssertEqual(boundingBox.upperRight.longitude, upperRight.longitude)
-        
-        XCTAssertEqual(boundingBox.diagonalDistance(), diagonal)
-    }
-    
-    func testBoundingBoxExpand() {
-        let lowerLeft = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
-        let upperRight = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
-        
-        let expandedLowerLeft = CLLocationCoordinate2DMake(53.396981156263728, -2.4017320756211551)
-        let expandedUpperRight = CLLocationCoordinate2DMake(53.577707783323063, -2.0979894065098326)
-        
-        let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
-        let expandedBoundingBox = boundingBox.expand(by: 1000)
-        
-        
-        XCTAssertEqual(expandedBoundingBox.lowerLeft.latitude, expandedLowerLeft.latitude)
-        XCTAssertEqual(expandedBoundingBox.lowerLeft.longitude, expandedLowerLeft.longitude)
-        XCTAssertEqual(expandedBoundingBox.upperRight.latitude, expandedUpperRight.latitude)
-        XCTAssertEqual(expandedBoundingBox.upperRight.longitude, expandedUpperRight.longitude)
-    }
+
 }
