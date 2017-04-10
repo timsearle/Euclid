@@ -7,6 +7,11 @@ ___
 
 Euclid is a cross-platform utility class written in Swift 3 that provides convenience methods allowing the  user to perform Great-Circle mathematics with ease.
 
+* iOS
+* macOS
+* tvOS
+* watchOS 
+
 ## Features
 ___
 
@@ -77,6 +82,14 @@ Run `carthage update` to build the framework and drag the built Euclid.framework
 ___
 
 This library is written in Swift 3.
+
+## Apps using Euclid
+___
+
+We'd love to hear what you have used Euclid for, if you would like your app displayed here, please send a pull request!
+
+* #### [Eagle](https://itunes.apple.com/ao/app/eagle/id1071087462?mt=8)
+
 
 ## Contributions
 ___
