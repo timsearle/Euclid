@@ -3,14 +3,14 @@ ___
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/niceagency/LocationMonitor) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid)
 
-#### Supports Swift 3
+#### Supports Swift 4
 
 Euclid is a cross-platform utility class written in Swift 3 that provides convenience methods allowing the  user to perform Great-Circle mathematics with ease.
 
 * iOS
 * macOS
 * tvOS
-* watchOS 
+* watchOS
 
 ## Features
 ___
