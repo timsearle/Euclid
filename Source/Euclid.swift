@@ -102,7 +102,7 @@ public class Euclid {
     ///   - bearing: Bearing given as value in range -180.0 - 180.0
     /// - Returns: A destination CLLocationCoordinate2D calculated based on the parameters passed
     public static func destination(start: CLLocationCoordinate2D, distance: CLLocationDistance, bearing: Bearing) -> CLLocationCoordinate2D {
-        let compassBearing = (bearing.toRadians() + (2 * M_PI)).toDegrees()
+        let compassBearing = (bearing.toRadians() + (2 * .pi)).toDegrees()
         
         return destination(start: start, distance: distance, compassBearing: compassBearing)
     }
@@ -124,7 +124,7 @@ public class Euclid {
         
         let destinationLatitude = asin(sin(startLatitudeRads) * cos(angularDistance) + cos(startLatitudeRads) * sin(angularDistance) * cos(bearingRads));
         var destinationLongitude = startLongitudeRads + atan2(sin(bearingRads) * sin(angularDistance) * cos(startLatitudeRads), cos(angularDistance) - sin(startLatitudeRads) * sin(destinationLatitude));
-        destinationLongitude = destinationLongitude + (3 * M_PI).truncatingRemainder(dividingBy: (2 * M_PI)) - M_PI;
+        destinationLongitude = destinationLongitude + (3 * .pi).truncatingRemainder(dividingBy: (2 * .pi)) - .pi;
         
         return CLLocationCoordinate2D(latitude: destinationLatitude.toDegrees(), longitude: destinationLongitude.toDegrees())
     }
@@ -136,7 +136,7 @@ public extension Radians {
     ///
     /// - Returns: The receiver's value converted to degrees
     public func toDegrees() -> CLLocationDegrees {
-        return self / (M_PI / 180)
+        return self / (.pi / 180)
     }
 }
 
@@ -146,7 +146,7 @@ public extension CLLocationDegrees {
     ///
     /// - Returns: The receiver's value converted to radians
     public func toRadians() -> Radians {
-        return self * (M_PI / 180)
+        return self * (.pi / 180)
     }
 }
 

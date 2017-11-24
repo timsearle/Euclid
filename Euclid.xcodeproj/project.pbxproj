@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2210C5221DFC5D32008E2DF5 /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2210C5191DFC5D31008E2DF5 /* Euclid.framework */; };
-		22C2ABB51E06DAFD00EF9607 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */; };
+		22C2BCEC1FC897D100A94A59 /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */; };
+		22C2BCED1FC897D100A94A59 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */; };
+		22C2BCEF1FC897D200A94A59 /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */; };
+		22C2BCF01FC897D200A94A59 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */; };
+		22C2BCF21FC897D200A94A59 /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */; };
+		22C2BCF31FC897D200A94A59 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */; };
 		875610591E9B829A001F0E1E /* Euclid iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610511E9B8290001F0E1E /* Euclid iOS.h */; };
 		8756105A1E9B829F001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610821E9B8B24001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610711E9B8ACE001F0E1E /* Euclid.framework */; };
-		875610881E9B8BC4001F0E1E /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */; };
 		875610891E9B8BFD001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		8756108A1E9B8C88001F0E1E /* Euclid macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610521E9B8290001F0E1E /* Euclid macOS.h */; };
 		875610981E9B8D6A001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610A21E9B8DB6001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610901E9B8D57001F0E1E /* Euclid.framework */; };
-		875610A81E9B8DD1001F0E1E /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */; };
 		875610AB1E9B8E3D001F0E1E /* Euclid tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */; };
 		875610B91E9B8EA6001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610BD1E9B8ED8001F0E1E /* Euclid watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */; };
-		875610E11E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */; };
-		875610E21E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */; };
-		875610E31E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,9 @@
 /* Begin PBXFileReference section */
 		2210C5191DFC5D31008E2DF5 /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2210C5211DFC5D32008E2DF5 /* Euclid iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordinateTests.swift; path = "Euclid Tests/CoordinateTests.swift"; sourceTree = SOURCE_ROOT; };
-		22C2ABAE1E06D99900EF9607 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Euclid Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
+		22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBoxTests.swift; sourceTree = "<group>"; };
+		22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
+		22C2BCE81FC8979E00A94A59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875610511E9B8290001F0E1E /* Euclid iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid iOS.h"; path = "Source/Euclid iOS.h"; sourceTree = "<group>"; };
 		875610521E9B8290001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid macOS.h"; path = "Source/Euclid macOS.h"; sourceTree = "<group>"; };
 		875610531E9B8290001F0E1E /* Euclid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Euclid.swift; path = Source/Euclid.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid tvOS.h"; path = "Source/Euclid tvOS.h"; sourceTree = "<group>"; };
 		875610B11E9B8E80001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid watchOS.h"; path = "Source/Euclid watchOS.h"; sourceTree = "<group>"; };
-		875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBoxTests.swift; path = "Euclid Tests/BoundingBoxTests.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				875610501E9B826D001F0E1E /* Source */,
-				2210C5251DFC5D32008E2DF5 /* Euclid Tests */,
+				22C2BCE51FC8975800A94A59 /* Euclid Tests */,
 				2210C4FF1DFC5CF2008E2DF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,15 +148,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2210C5251DFC5D32008E2DF5 /* Euclid Tests */ = {
+		22C2BCE51FC8975800A94A59 /* Euclid Tests */ = {
 			isa = PBXGroup;
 			children = (
-				22C2ABAD1E06D99900EF9607 /* CoordinateTests.swift */,
-				875610E01E9B9D55001F0E1E /* BoundingBoxTests.swift */,
-				22C2ABAE1E06D99900EF9607 /* Info.plist */,
+				22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */,
+				22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */,
+				22C2BCE81FC8979E00A94A59 /* Info.plist */,
 			);
-			name = "Euclid Tests";
-			path = "Euclid iOSTests";
+			path = "Euclid Tests";
 			sourceTree = "<group>";
 		};
 		875610501E9B826D001F0E1E /* Source */ = {
@@ -343,36 +342,42 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				TargetAttributes = {
 					2210C5181DFC5D31008E2DF5 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					2210C5201DFC5D32008E2DF5 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = "-";
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					875610701E9B8ACE001F0E1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					8756107C1E9B8B24001F0E1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					8756108F1E9B8D57001F0E1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					8756109C1E9B8DB6001F0E1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					875610B01E9B8E80001F0E1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -465,8 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C2ABB51E06DAFD00EF9607 /* CoordinateTests.swift in Sources */,
-				875610E11E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */,
+				22C2BCEF1FC897D200A94A59 /* BoundingBoxTests.swift in Sources */,
+				22C2BCF01FC897D200A94A59 /* CoordinateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,8 +487,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610881E9B8BC4001F0E1E /* CoordinateTests.swift in Sources */,
-				875610E21E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */,
+				22C2BCEC1FC897D100A94A59 /* BoundingBoxTests.swift in Sources */,
+				22C2BCED1FC897D100A94A59 /* CoordinateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,8 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610A81E9B8DD1001F0E1E /* CoordinateTests.swift in Sources */,
-				875610E31E9B9D55001F0E1E /* BoundingBoxTests.swift in Sources */,
+				22C2BCF21FC897D200A94A59 /* BoundingBoxTests.swift in Sources */,
+				22C2BCF31FC897D200A94A59 /* CoordinateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,12 +541,18 @@
 		2210C4F71DFC5CBA008E2DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -561,12 +572,18 @@
 		2210C4F81DFC5CBA008E2DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -604,7 +621,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -641,7 +658,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -671,7 +689,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -700,7 +718,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -761,7 +780,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -810,7 +830,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -857,7 +878,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -899,7 +921,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -940,7 +963,8 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -973,7 +997,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1016,7 +1041,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1057,7 +1083,8 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				VALIDATE_PRODUCT = YES;
@@ -1097,7 +1124,8 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -1127,7 +1155,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1173,7 +1202,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1215,7 +1245,8 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

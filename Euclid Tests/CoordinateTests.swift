@@ -20,7 +20,7 @@ class CoordinateTests: XCTestCase {
         let test1000 = source.distance(to: destination)
         let testTranspose1000 = destination.distance(to: source)
     
-        XCTAssertEqualWithAccuracy(test1000, 100000, accuracy: 20, "Expected distance is ~100,000 metres")
+        XCTAssertEqual(test1000, 100000, accuracy: 20, "Expected distance is ~100,000 metres")
         XCTAssertTrue(test1000 == testTranspose1000 , "Swapping sender and receiver should not cause different results")
     }
     
@@ -30,7 +30,7 @@ class CoordinateTests: XCTestCase {
         
         let bearing = source.bearing(to: destination)
         
-        XCTAssertEqualWithAccuracy(bearing, -89.424, accuracy: 0.1, "Expected bearing is ~-89.424")
+        XCTAssertEqual(bearing, -89.424, accuracy: 0.1, "Expected bearing is ~-89.424")
     }
     
     func testCompassBearingToCoordinate() {
@@ -39,7 +39,7 @@ class CoordinateTests: XCTestCase {
         
         let bearing = source.compassBearing(to: destination)
         
-        XCTAssertEqualWithAccuracy(bearing, 270, accuracy: 0.75, "Expected bearing is ~270")
+        XCTAssertEqual(bearing, 270, accuracy: 0.75, "Expected bearing is ~270")
     }
     
     func testDestinationCoordinateForCompassBearing() {
@@ -51,8 +51,8 @@ class CoordinateTests: XCTestCase {
         
         let calculatedDestination = Euclid.destination(start: source, distance: 100000, compassBearing: compassBearing)
         
-        XCTAssertEqualWithAccuracy(calculatedDestination.latitude, destination.latitude, accuracy: 0.01)
-        XCTAssertEqualWithAccuracy(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
+        XCTAssertEqual(calculatedDestination.latitude, destination.latitude, accuracy: 0.01)
+        XCTAssertEqual(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
     }
     
     func testDestinationCoordinateForBearing() {
@@ -64,8 +64,8 @@ class CoordinateTests: XCTestCase {
         
         let calculatedDestination = Euclid.destination(start: source, distance: 100000, bearing: bearing)
         
-        XCTAssertEqualWithAccuracy(calculatedDestination.latitude, destination.latitude, accuracy: 0.01)
-        XCTAssertEqualWithAccuracy(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
+        XCTAssertEqual(calculatedDestination.latitude, destination.latitude, accuracy: 0.01)
+        XCTAssertEqual(calculatedDestination.longitude, destination.longitude, accuracy: 0.01)
     }
     
     func testMidpointBetweenCoordinates() {
@@ -75,20 +75,20 @@ class CoordinateTests: XCTestCase {
         
         let calcuatedMidpoint = source.midpoint(between: destination)
         
-        XCTAssertEqualWithAccuracy(calcuatedMidpoint.latitude, actualMidpoint.latitude, accuracy: 0.001)
-        XCTAssertEqualWithAccuracy(calcuatedMidpoint.longitude, actualMidpoint.longitude, accuracy: 0.001)
+        XCTAssertEqual(calcuatedMidpoint.latitude, actualMidpoint.latitude, accuracy: 0.001)
+        XCTAssertEqual(calcuatedMidpoint.longitude, actualMidpoint.longitude, accuracy: 0.001)
     }
     
     func testRadianConversion() {
         let degrees = CLLocationDegrees(360)
         let radians = degrees.toRadians()
-        XCTAssertEqualWithAccuracy(radians, 6.28319, accuracy: 0.01 ,"Expected radians is ~6.28319")
+        XCTAssertEqual(radians, 6.28319, accuracy: 0.01 ,"Expected radians is ~6.28319")
     }
     
     func testDegreeConversion() {
         let radians = 1.0
         let degrees = radians.toDegrees()
-        XCTAssertEqualWithAccuracy(degrees, 57.2958, accuracy: 0.01 ,"Expected degrees is ~57.2958")
+        XCTAssertEqual(degrees, 57.2958, accuracy: 0.01 ,"Expected degrees is ~57.2958")
     }
 
 }

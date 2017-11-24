@@ -30,7 +30,7 @@ class BoundingBoxTests: XCTestCase {
                                       upperRight: CLLocationCoordinate2DMake(0.0063591640470713005, 0.0063591640862453083))
         let diagonalDistance = 2000.0
         
-        XCTAssertEqualWithAccuracy(boundingBox.diagonal, diagonalDistance, accuracy: 0.0001)
+        XCTAssertEqual(boundingBox.diagonal, diagonalDistance, accuracy: 0.0001)
     }
 
     func testBoundingBoxMidpoint() {
@@ -43,8 +43,8 @@ class BoundingBoxTests: XCTestCase {
         let actualMidpoint = CLLocationCoordinate2DMake(53.4875, -2.250278)
         let calculatedMidpoint = boundingBox.midpoint
         
-        XCTAssertEqualWithAccuracy(actualMidpoint.latitude, calculatedMidpoint.latitude, accuracy: 0.01)
-        XCTAssertEqualWithAccuracy(actualMidpoint.longitude, calculatedMidpoint.longitude, accuracy: 0.01)
+        XCTAssertEqual(actualMidpoint.latitude, calculatedMidpoint.latitude, accuracy: 0.01)
+        XCTAssertEqual(actualMidpoint.longitude, calculatedMidpoint.longitude, accuracy: 0.01)
     }
     
     func testBoundingBoxExpand() {
@@ -73,10 +73,10 @@ class BoundingBoxTests: XCTestCase {
         let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
         let shrunkBoundingBox = boundingBox.shrink(by: 1000)
         
-        XCTAssertEqualWithAccuracy(shrunkBoundingBox.lowerLeft.latitude, shrunkLowerLeft.latitude, accuracy: 0.01)
-        XCTAssertEqualWithAccuracy(shrunkBoundingBox.lowerLeft.longitude, shrunkLowerLeft.longitude, accuracy: 0.01)
-        XCTAssertEqualWithAccuracy(shrunkBoundingBox.upperRight.latitude, shrunkUpperRight.latitude, accuracy: 0.01)
-        XCTAssertEqualWithAccuracy(shrunkBoundingBox.upperRight.longitude, shrunkUpperRight.longitude, accuracy: 0.01)
+        XCTAssertEqual(shrunkBoundingBox.lowerLeft.latitude, shrunkLowerLeft.latitude, accuracy: 0.01)
+        XCTAssertEqual(shrunkBoundingBox.lowerLeft.longitude, shrunkLowerLeft.longitude, accuracy: 0.01)
+        XCTAssertEqual(shrunkBoundingBox.upperRight.latitude, shrunkUpperRight.latitude, accuracy: 0.01)
+        XCTAssertEqual(shrunkBoundingBox.upperRight.longitude, shrunkUpperRight.longitude, accuracy: 0.01)
     }
     
     func testBoundingBoxContainsCoordinate() {
@@ -90,5 +90,24 @@ class BoundingBoxTests: XCTestCase {
         
         XCTAssertFalse(boundingBox.contains(coordinate: outsideCoordinate))
         XCTAssertTrue(boundingBox.contains(coordinate: insideCoordinate))
+    }
+    
+    func testDescription() {
+        let lowerLeft = CLLocationCoordinate2DMake(53.39, -2.40)
+        let upperRight = CLLocationCoordinate2DMake(53.57, -2.097)
+        
+        let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
+        
+        XCTAssertEqual(boundingBox.description, "Bounding Box:\nlowerLeft coordinate: CLLocationCoordinate2D(latitude: 53.390000000000001, longitude: -2.3999999999999999)\nupperRight coordinate: CLLocationCoordinate2D(latitude: 53.57, longitude: -2.097)\nmidpoint: CLLocationCoordinate2D(latitude: 53.480095792138393, longitude: -2.2488213719663692)\ndiagonal: 28330.4404670031 metres\n")
+    }
+    
+    func testDebugDescription() {
+        let lowerLeft = CLLocationCoordinate2DMake(53.39, -2.40)
+        let upperRight = CLLocationCoordinate2DMake(53.57, -2.097)
+        
+        let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
+        
+        XCTAssertEqual(boundingBox.debugDescription, "Bounding Box:\nlowerLeft coordinate: CLLocationCoordinate2D(latitude: 53.390000000000001, longitude: -2.3999999999999999)\nupperRight coordinate: CLLocationCoordinate2D(latitude: 53.57, longitude: -2.097)\nmidpoint: CLLocationCoordinate2D(latitude: 53.480095792138393, longitude: -2.2488213719663692)\ndiagonal: 28330.4404670031 metres\n")
+
     }
 }
