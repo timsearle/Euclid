@@ -3,35 +3,32 @@ ___
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/niceagency/LocationMonitor) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid)
 
-#### Supports Swift 4
+#### Supports Swift 4.2
 
-Euclid is a cross-platform utility class written in Swift that provides convenience methods allowing the  user to perform Great-Circle mathematics with ease.
-
-* iOS
-* macOS
-* tvOS
-* watchOS
+Euclid is a cross-platform (iOS, macOS, tvOS, watchOS) utility class written in Swift that provides convenience methods allowing the  user to perform Great-Circle mathematics with ease.
 
 ## Features
 ___
 
-* Distance between two given coordinates
-* Initial bearing given source and destination coordinates
-* `toRadians()` and `toDegrees()` helper methods
-* Destination coordinate given a start coordiante, distance and bearing
-* Supports bearings in the range -180 - 180 degrees and bearings in a compass range of 0 - 360 degrees.
+* Calculates the distance between two given coordinates
+* Calculates the initial bearing when given source and destination coordinates
+* Includes `toRadians()` and `toDegrees()` helper methods as extensions on `CLLocationDegrees`
+* When given a start coordinate, bearing and distance to travel a destination coordinate is calculated
+* Supports bearings in the range -180 to 180 degrees and bearings in a compass range of 0 to 360 degrees
 * 100% unit test coverage
 
 ##### System requirements
 
-+ iOS 9.0+
-+ Xcode 8.0+
-+ Swift 3.0+
++ Deployment target of iOS 9.0+ / macOS 10.11+ / tvOS 10.1+ / watchOS 3.1+
++ Xcode 9.0+
++ Swift 4.2+
 
 ## Usage
 ___
 
 ###  Euclid
+
+The key Great-Circle method provided by the library is `destination` and this is accessible as a static func on the `Euclid` class.
 
 ``` Swift
 public static func destination(start: CLLocationCoordinate2D, distance: CLLocationDistance, bearing: Bearing) -> CLLocationCoordinate2D { } // Destionation coordinate given start, distance and bearing
@@ -59,29 +56,27 @@ Euclid.kEarthRadiusMetres // Radius of the earth in metres used by all calculati
 public typealias Bearing = Double // Representing a bearing in the range -180 - 180
 ```
 
+In addition to `Euclid` there is an additional type of `BoundingBox` that can be used to represent rectangular areas on a sphere.
+
+``` Swift
+public struct BoundingBox : CustomStringConvertible, CustomDebugStringConvertible {
+    public let lowerLeft: CLLocationCoordinate2D
+    public let upperRight: CLLocationCoordinate2D
+    public let diagonal: CLLocationDistance
+    public let midpoint: CLLocationCoordinate2D
+}
+```
+
 ## Installation
 ___
 
 ### Carthage
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-`$ brew update`
-
-`$ brew install carthage`
-
-To integrate Euclid into your Xcode project using Carthage, specify it in your Cartfile:
+To integrate Euclid into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile:
 
 `github "timsearle/Euclid"`
 
-Run `carthage update` to build the framework and drag the built Euclid.framework into your Xcode project.
-
-## Additional Information
-___
-
-This library is written in Swift.
+Run `carthage update` to build the framework and drag the built Euclid.framework into your Xcode project and update your run scripts as appropriate. For additional support, please visit the Carthage [documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
 
 ## Apps using Euclid
 ___
@@ -94,7 +89,7 @@ We'd love to hear what you have used Euclid for, if you would like your app disp
 ## Contributions
 ___
 
-If you wish to contribute to Euclid please fork the repository and send a pull request or raise an issue within GitHub.
+Currently Euclid has all the features that it was originally developed for, but the world of Euclidean geometry is far larger. If you wish to contribute to Euclid please fork the repository and send a pull request. Contributions and feature requests are always welcome, please do not hesistate to raise an issue with the appropriate label so that any contributors can see.
 
 ## License
 ___
