@@ -43,7 +43,6 @@ class CoordinateTests: XCTestCase {
     }
     
     func testDestinationCoordinateForCompassBearing() {
-        
         let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
         let destination = CLLocationCoordinate2D(latitude: 52.0, longitude: -1.461)
         
@@ -56,7 +55,6 @@ class CoordinateTests: XCTestCase {
     }
     
     func testDestinationCoordinateForBearing() {
-        
         let source = CLLocationCoordinate2D(latitude: 52.0, longitude: -0.0)
         let destination = CLLocationCoordinate2D(latitude: 52.0, longitude: -1.461)
         
@@ -90,5 +88,4 @@ class CoordinateTests: XCTestCase {
         let degrees = radians.toDegrees()
         XCTAssertEqual(degrees, 57.2958, accuracy: 0.01 ,"Expected degrees is ~57.2958")
     }
-
 }
