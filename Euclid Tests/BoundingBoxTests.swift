@@ -34,7 +34,6 @@ class BoundingBoxTests: XCTestCase {
     }
 
     func testBoundingBoxMidpoint() {
-        
         let lowerLeft = CLLocationCoordinate2DMake(53.403340795473305, -2.3910671181116276)
         let upperRight = CLLocationCoordinate2DMake(53.571349097504395, -2.1086999022056996)
         
@@ -98,7 +97,7 @@ class BoundingBoxTests: XCTestCase {
         
         let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
         
-        XCTAssertEqual(boundingBox.description, "Bounding Box:\nlowerLeft coordinate: CLLocationCoordinate2D(latitude: 53.390000000000001, longitude: -2.3999999999999999)\nupperRight coordinate: CLLocationCoordinate2D(latitude: 53.57, longitude: -2.097)\nmidpoint: CLLocationCoordinate2D(latitude: 53.480095792138393, longitude: -2.2488213719663692)\ndiagonal: 28330.4404670031 metres\n")
+        XCTAssertEqual(boundingBox.description, "Bounding Box:\nlowerLeft coordinate: CLLocationCoordinate2D(latitude: 53.39, longitude: -2.4)\nupperRight coordinate: CLLocationCoordinate2D(latitude: 53.57, longitude: -2.097)\nmidpoint: CLLocationCoordinate2D(latitude: 53.48009579213839, longitude: -2.248821371966369)\ndiagonal: 28330.440467003136 metres\n")
     }
     
     func testDebugDescription() {
@@ -107,7 +106,7 @@ class BoundingBoxTests: XCTestCase {
         
         let boundingBox = BoundingBox(lowerLeft: lowerLeft, upperRight: upperRight)
         
-        XCTAssertEqual(boundingBox.debugDescription, "Bounding Box:\nlowerLeft coordinate: CLLocationCoordinate2D(latitude: 53.390000000000001, longitude: -2.3999999999999999)\nupperRight coordinate: CLLocationCoordinate2D(latitude: 53.57, longitude: -2.097)\nmidpoint: CLLocationCoordinate2D(latitude: 53.480095792138393, longitude: -2.2488213719663692)\ndiagonal: 28330.4404670031 metres\n")
+        XCTAssertEqual(boundingBox.debugDescription, "Bounding Box:\nlowerLeft coordinate: CLLocationCoordinate2D(latitude: 53.39, longitude: -2.4)\nupperRight coordinate: CLLocationCoordinate2D(latitude: 53.57, longitude: -2.097)\nmidpoint: CLLocationCoordinate2D(latitude: 53.48009579213839, longitude: -2.248821371966369)\ndiagonal: 28330.440467003136 metres\n")
 
     }
 }
