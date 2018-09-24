@@ -31,7 +31,7 @@ ___
 The key Great-Circle method provided by the library is `destination` and this is accessible as a static func on the `Euclid` class.
 
 ``` Swift
-public static func destination(start: CLLocationCoordinate2D, distance: CLLocationDistance, bearing: Bearing) -> CLLocationCoordinate2D { } // Destionation coordinate given start, distance and bearing
+public static func destination(start: CLLocationCoordinate2D, distance: CLLocationDistance, bearing: Bearing) -> CLLocationCoordinate2D { } // Destination coordinate given start, distance and bearing
 let calculatedDestination = Euclid.destination(start: source, distance: 100000, bearing: bearing)
 ```
 
