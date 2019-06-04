@@ -23,7 +23,7 @@
 		875610A21E9B8DB6001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610901E9B8D57001F0E1E /* Euclid.framework */; };
 		875610AB1E9B8E3D001F0E1E /* Euclid tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */; };
 		875610B91E9B8EA6001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
-		875610BD1E9B8ED8001F0E1E /* Euclid watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */; };
+		875610BD1E9B8ED8001F0E1E /* Euclid macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610BA1E9B8ED3001F0E1E /* Euclid macOS.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,17 +56,17 @@
 		22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBoxTests.swift; sourceTree = "<group>"; };
 		22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
 		22C2BCE81FC8979E00A94A59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		875610511E9B8290001F0E1E /* Euclid iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid iOS.h"; path = "Source/Euclid iOS.h"; sourceTree = "<group>"; };
-		875610521E9B8290001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid macOS.h"; path = "Source/Euclid macOS.h"; sourceTree = "<group>"; };
-		875610531E9B8290001F0E1E /* Euclid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Euclid.swift; path = Source/Euclid.swift; sourceTree = "<group>"; };
-		875610541E9B8290001F0E1E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		875610511E9B8290001F0E1E /* Euclid iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid iOS.h"; sourceTree = "<group>"; };
+		875610521E9B8290001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid macOS.h"; sourceTree = "<group>"; };
+		875610531E9B8290001F0E1E /* Euclid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euclid.swift; sourceTree = "<group>"; };
+		875610541E9B8290001F0E1E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875610711E9B8ACE001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8756107D1E9B8B24001F0E1E /* Euclid macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875610901E9B8D57001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8756109D1E9B8DB6001F0E1E /* Euclid tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid tvOS.h"; path = "Source/Euclid tvOS.h"; sourceTree = "<group>"; };
+		875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid tvOS.h"; sourceTree = "<group>"; };
 		875610B11E9B8E80001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Euclid watchOS.h"; path = "Source/Euclid watchOS.h"; sourceTree = "<group>"; };
+		875610BA1E9B8ED3001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid macOS.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 		2210C4F21DFC5CBA008E2DF5 = {
 			isa = PBXGroup;
 			children = (
-				875610501E9B826D001F0E1E /* Source */,
+				875610501E9B826D001F0E1E /* Sources */,
 				22C2BCE51FC8975800A94A59 /* Euclid Tests */,
 				2210C4FF1DFC5CF2008E2DF5 /* Products */,
 			);
@@ -158,17 +158,17 @@
 			path = "Euclid Tests";
 			sourceTree = "<group>";
 		};
-		875610501E9B826D001F0E1E /* Source */ = {
+		875610501E9B826D001F0E1E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				875610511E9B8290001F0E1E /* Euclid iOS.h */,
 				875610521E9B8290001F0E1E /* Euclid macOS.h */,
-				875610BA1E9B8ED3001F0E1E /* Euclid watchOS.h */,
+				875610BA1E9B8ED3001F0E1E /* Euclid macOS.h */,
 				875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */,
 				875610531E9B8290001F0E1E /* Euclid.swift */,
 				875610541E9B8290001F0E1E /* Info.plist */,
 			);
-			name = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +202,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610BD1E9B8ED8001F0E1E /* Euclid watchOS.h in Headers */,
+				875610BD1E9B8ED8001F0E1E /* Euclid macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -714,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
