@@ -3,7 +3,7 @@ ___
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/niceagency/LocationMonitor) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid)
 
-#### Supports Swift 4.2
+#### Supports Swift 5.0
 
 Euclid is a cross-platform (iOS, macOS, tvOS, watchOS) utility class written in Swift that provides convenience methods allowing the  user to perform Great-Circle mathematics with ease.
 
@@ -20,8 +20,8 @@ ___
 ##### System requirements
 
 + Deployment target of iOS 9.0+ / macOS 10.11+ / tvOS 10.1+ / watchOS 3.1+
-+ Xcode 9.0+
-+ Swift 4.2+
++ Xcode 10.0+
++ Swift 5.0+
 
 ## Usage
 ___
