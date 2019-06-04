@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
-               BuildableName = "Euclid.framework"
+               BlueprintIdentifier = "87F0547922A71D1600F140AE"
+               BuildableName = "Euclid_iOS.framework"
                BlueprintName = "Euclid iOS"
                ReferencedContainer = "container:Euclid.xcodeproj">
             </BuildableReference>
@@ -31,8 +31,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
-            BuildableName = "Euclid.framework"
+            BlueprintIdentifier = "87F0547922A71D1600F140AE"
+            BuildableName = "Euclid_iOS.framework"
             BlueprintName = "Euclid iOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
-            BuildableName = "Euclid.framework"
+            BlueprintIdentifier = "87F0547922A71D1600F140AE"
+            BuildableName = "Euclid_iOS.framework"
             BlueprintName = "Euclid iOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
          </BuildableReference>
@@ -79,8 +79,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2210C5181DFC5D31008E2DF5"
-            BuildableName = "Euclid.framework"
+            BlueprintIdentifier = "87F0547922A71D1600F140AE"
+            BuildableName = "Euclid_iOS.framework"
             BlueprintName = "Euclid iOS"
             ReferencedContainer = "container:Euclid.xcodeproj">
          </BuildableReference>
