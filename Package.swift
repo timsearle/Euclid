@@ -11,7 +11,16 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(
-            name: "Euclid",
+            name: "Euclid iOS",
+            dependencies: []),
+        .target(
+            name: "Euclid macOS",
+            dependencies: []),
+        .target(
+            name: "Euclid tvOS",
+            dependencies: []),
+        .target(
+            name: "Euclid watchOS",
             dependencies: []),
         .testTarget(
             name: "EuclidTests",
