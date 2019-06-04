@@ -135,7 +135,7 @@ public extension Radians {
     /// Convert radians to degrees
     ///
     /// - Returns: The receiver's value converted to degrees
-    public func toDegrees() -> CLLocationDegrees {
+    func toDegrees() -> CLLocationDegrees {
         return self / (.pi / 180)
     }
 }
@@ -145,7 +145,7 @@ public extension CLLocationDegrees {
     /// Convert degrees to radians
     ///
     /// - Returns: The receiver's value converted to radians
-    public func toRadians() -> Radians {
+    func toRadians() -> Radians {
         return self * (.pi / 180)
     }
 }
@@ -156,7 +156,7 @@ public extension CLLocationCoordinate2D {
     ///
     /// - Parameter coordinate: Target `CLLocationCoordinate2D` to measure the distance to
     /// - Returns: `CLLocationDistance` representing the distance metres
-    public func distance(to coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
+    func distance(to coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
         
         let latitudeSource = self.latitude
         let longitudeSource = self.longitude
@@ -180,7 +180,7 @@ public extension CLLocationCoordinate2D {
     ///
     /// - Parameter coordinate: Target CLLocationCoordinate2D to calculate bearing towards
     /// - Returns: The initial compass bearing required to travel in a straight line to target coordinate
-    public func compassBearing(to coordinate: CLLocationCoordinate2D) -> CLLocationDirection {
+    func compassBearing(to coordinate: CLLocationCoordinate2D) -> CLLocationDirection {
         let bearing = self.bearing(to: coordinate)
         
         return (bearing + 360).truncatingRemainder(dividingBy: 360)
@@ -190,7 +190,7 @@ public extension CLLocationCoordinate2D {
     ///
     /// - Parameter coordinate: Target `CLLocationCoordinate2D` to calculate bearing towards
     /// - Returns: The initial bearing required to travel in a straight line to target coordinate
-    public func bearing(to coordinate: CLLocationCoordinate2D) -> Bearing {
+    func bearing(to coordinate: CLLocationCoordinate2D) -> Bearing {
         
         let latitudeSource = self.latitude
         let longitudeSource = self.longitude
@@ -215,7 +215,7 @@ public extension CLLocationCoordinate2D {
     ///
     /// - Parameter coordinate: Destination `CLLocationCoordinate2D` to calculate midway point en route to
     /// - Returns: The midway point between the receiver and `coordinate`
-    public func midpoint(between coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+    func midpoint(between coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
         
         let latitudeSourceRads = self.latitude.toRadians()
         let latitudeDestinationRads = coordinate.latitude.toRadians()
