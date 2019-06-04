@@ -14,16 +14,12 @@
 		22C2BCF01FC897D200A94A59 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */; };
 		22C2BCF21FC897D200A94A59 /* BoundingBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */; };
 		22C2BCF31FC897D200A94A59 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */; };
-		875610591E9B829A001F0E1E /* Euclid iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610511E9B8290001F0E1E /* Euclid iOS.h */; };
 		8756105A1E9B829F001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610821E9B8B24001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610711E9B8ACE001F0E1E /* Euclid.framework */; };
 		875610891E9B8BFD001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
-		8756108A1E9B8C88001F0E1E /* Euclid macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610521E9B8290001F0E1E /* Euclid macOS.h */; };
 		875610981E9B8D6A001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
 		875610A21E9B8DB6001F0E1E /* Euclid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875610901E9B8D57001F0E1E /* Euclid.framework */; };
-		875610AB1E9B8E3D001F0E1E /* Euclid tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */; };
 		875610B91E9B8EA6001F0E1E /* Euclid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875610531E9B8290001F0E1E /* Euclid.swift */; };
-		875610BD1E9B8ED8001F0E1E /* Euclid macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 875610BA1E9B8ED3001F0E1E /* Euclid macOS.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,17 +52,13 @@
 		22C2BCE61FC8979E00A94A59 /* BoundingBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBoxTests.swift; sourceTree = "<group>"; };
 		22C2BCE71FC8979E00A94A59 /* CoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
 		22C2BCE81FC8979E00A94A59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		875610511E9B8290001F0E1E /* Euclid iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid iOS.h"; sourceTree = "<group>"; };
-		875610521E9B8290001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid macOS.h"; sourceTree = "<group>"; };
 		875610531E9B8290001F0E1E /* Euclid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euclid.swift; sourceTree = "<group>"; };
 		875610541E9B8290001F0E1E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875610711E9B8ACE001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8756107D1E9B8B24001F0E1E /* Euclid macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875610901E9B8D57001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8756109D1E9B8DB6001F0E1E /* Euclid tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Euclid tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid tvOS.h"; sourceTree = "<group>"; };
 		875610B11E9B8E80001F0E1E /* Euclid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euclid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		875610BA1E9B8ED3001F0E1E /* Euclid macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Euclid macOS.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +153,6 @@
 		875610501E9B826D001F0E1E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				875610511E9B8290001F0E1E /* Euclid iOS.h */,
-				875610521E9B8290001F0E1E /* Euclid macOS.h */,
-				875610BA1E9B8ED3001F0E1E /* Euclid macOS.h */,
-				875610A91E9B8E3A001F0E1E /* Euclid tvOS.h */,
 				875610531E9B8290001F0E1E /* Euclid.swift */,
 				875610541E9B8290001F0E1E /* Info.plist */,
 			);
@@ -178,7 +166,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610591E9B829A001F0E1E /* Euclid iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +173,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8756108A1E9B8C88001F0E1E /* Euclid macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +180,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610AB1E9B8E3D001F0E1E /* Euclid tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +187,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875610BD1E9B8ED8001F0E1E /* Euclid macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +828,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -871,7 +856,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -893,6 +878,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -915,7 +901,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1010,6 +996,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1035,7 +1022,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1058,6 +1045,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1078,7 +1066,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1196,7 +1184,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1240,7 +1228,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;

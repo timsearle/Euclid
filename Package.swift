@@ -4,26 +4,17 @@ import PackageDescription
 let package = Package(
     name: "Euclid",
     products: [
-        .library(
-            name: "Euclid",
-            targets: ["Euclid"]),
+        .library(name: "Euclid", targets: ["Euclid"])
     ],
-    dependencies: [],
     targets: [
         .target(
-            name: "Euclid iOS",
-            dependencies: []),
-        .target(
-            name: "Euclid macOS",
-            dependencies: []),
-        .target(
-            name: "Euclid tvOS",
-            dependencies: []),
-        .target(
-            name: "Euclid watchOS",
-            dependencies: []),
+            name: "Euclid",
+            path: "Sources"
+        ),
         .testTarget(
             name: "EuclidTests",
-            dependencies: ["Euclid"]),
+            dependencies: ["Euclid"],
+            path: "Euclid Tests"
+        )
     ]
 )
