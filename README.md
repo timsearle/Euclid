@@ -1,7 +1,8 @@
 # Euclid
 ___
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/timsearle/Euclid) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/timsearle/Euclid) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid) [![Build Status](https://app.bitrise.io/app/88e04f4e2aa19c9c/status.svg?token=JSr4hM-fZm62ekmYK1AF3A&branch=master)](https://app.bitrise.io/app/88e04f4e2aa19c9c)
+
 
 #### Supports Swift 5.0
 
