@@ -1,7 +1,7 @@
 # Euclid
 ___
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/niceagency/LocationMonitor) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/timsearle/Euclid) [![GitHub version](https://badge.fury.io/gh/timsearle%2Feuclid.svg)](https://badge.fury.io/gh/timsearle%2Feuclid)
 
 #### Supports Swift 5.0
 
