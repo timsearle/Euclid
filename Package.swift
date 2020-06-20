@@ -16,5 +16,6 @@ let package = Package(
             dependencies: ["Euclid"],
             path: "Euclid Tests"
         )
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
